@@ -1,7 +1,0 @@
-/vendor
-/node_modules
-/public/vendor
-/storage/logs
-.env
-npm-debug.log
-
