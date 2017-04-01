@@ -23,6 +23,7 @@ gulp.task('livereload', function (){
 });
 
 gulp.task('template', function (){
+
  gulp.src('html_content/*.html')
       .pipe(template('html_templates/template.html'))
       .pipe(gulp.dest('public'));
