@@ -23,19 +23,33 @@ gulp.task('livereload', function (){
   .pipe(connect.reload());
 });
 
-gulp.task('template', function (){
+gulp.task('template1', function (){
+  gulp.src('html_content/1column/*.html')
+    .pipe(template('html_templates/template_1column.html'))
+    .pipe(gulp.dest('public'));
+  }
+);
 
- gulp.src('html_content/*.html')
-      .pipe(template('html_templates/template.html'))
-      .pipe(gulp.dest('public'));
-});
+gulp.task('template2', function (){
+  gulp.src('html_content/2columns/*.html')
+    .pipe(template('html_templates/template_2columns.html'))
+    .pipe(gulp.dest('public'));
+  }
+);
+
+gulp.task('template3', function (){
+  gulp.src('html_content/3columns/*.html')
+    .pipe(template('html_templates/template_3columns.html'))
+    .pipe(gulp.dest('public'));
+  }
+);
 
 
 gulp.task('watch', function () {
-  gulp.watch(['./html_content/**/*.html','./html_templates/**/*.html'], ['template']);
+  gulp.watch(['./html_content/1column/*.html','./html_content/2columns/*.html','./html_content/3columns/*.html','./html_templates/1_column.html','./html_templates/2_columns.html','./html_templates/3_columns.html'], ['template1', 'template2', 'template3']);
   gulp.watch('./sass/**/*.scss', ['sass']);
   gulp.watch('./public/*', ['livereload']);
 });
 
-gulp.task('default', ['connect', 'watch', 'sass', 'template']);
+gulp.task('default', ['connect', 'watch', 'sass', 'template1', 'template2', 'template3']);
 
