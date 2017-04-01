@@ -14,7 +14,8 @@ gulp.task('connect', function(){
 gulp.task('sass', function () {
   return gulp.src('./sass/*.scss')
       .pipe(sass({ errLogToConsole: true }))
-      .pipe(gulp.dest('./public/css'));
+      .pipe(gulp.dest('./public/css'))
+      .pipe(connect.reload());
 });
 
 gulp.task('livereload', function (){
