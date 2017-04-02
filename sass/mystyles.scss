@@ -11,6 +11,9 @@ $brand-info:            #5bc0de !default;
 $brand-warning:         #f0ad4e !default;
 $brand-danger:          #d9534f !default;
 
+$white:          #FFFFFF !default;
+
+
 body {
-  background: $gray-darker;
+  background: $white;
 }
