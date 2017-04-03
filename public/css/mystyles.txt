@@ -1,0 +1,14 @@
+You won't find any css style here
+because mystyles.css file is not yet generated.
+
+Definition for mystyles.css you can find here:
+https://github.com/toporny/andrea_project/blob/master/sass/mystyles.scss
+
+You can generate this file by 'gulp' command.
+
+More info here:
+https://github.com/toporny/andrea_project/blob/master/readme.md
+
+If you really don't want to generate by yourself you can find already generated file in hosting server:
+
+http://alltic.home.pl/andrea_assigment/css/mystyles.css
