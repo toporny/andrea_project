@@ -1,7 +1,99 @@
-footer {
-  width: 100%;
-  background-color: #111111;
-  text-align:center;
-  padding-top:10px;
-  padding-bottom:10px;
+//## Gray and brand colors for use across Bootstrap.
+
+$gray:                   #464545 !default;
+
+$brand-primary:         #375a7f !default;
+$brand-success:         #00bc8c !default;
+$brand-info:            #3498DB !default;
+$brand-warning:         #F39C12 !default;
+$brand-danger:          #E74C3C !default;
+
+
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
+
+body {
+    font-family: "Roboto", "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #888888;
+    background-color: #060606;
+}
+
+.panel {
+    margin-bottom: 20px;
+    background-color: #222222;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.05);
+    box-shadow: 0 1px 1px rgba(0,0,0,0.05);
+}
+
+.navbar {
+    margin-bottom: 20px;
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 20px;
+    border: 1px solid #282828 !important;
+}
+
+.navbar-default {
+    background-color: #060606;
+}
+
+.navbar-default {
+  border-color: transparent;
+}
+.navbar-default .navbar-brand {
+  color: #ffffff;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: #00bc8c;
+  background-color: transparent;
+}
+.navbar-default .navbar-text {
+  color: #ffffff;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #888888;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #ffffff;
+  text-decoration:underline;
+  background-color: transparent;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #ffffff;
+  background-color: transparent
+}
+
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: transparent;
+}
+
+.navbar-default .navbar-toggle {
+  border-color: #28415b;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: #red;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #red;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: #282828;
+}
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+    background-color: #282828;
+}
+ 
+.navbar-default .navbar-toggle {
+    border-color: #282828;
 }
