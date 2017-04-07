@@ -1,13 +1,9 @@
-//## Gray and brand colors for use across Bootstrap.
-
-$gray:                   #464545 !default;
-
+$gray:                  #464545 !default;
 $brand-primary:         #375a7f !default;
 $brand-success:         #00bc8c !default;
 $brand-info:            #3498DB !default;
 $brand-warning:         #F39C12 !default;
 $brand-danger:          #E74C3C !default;
-
 
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
 
@@ -24,7 +20,6 @@ body {
     background-color: #222222;
     border: 1px solid transparent;
     border-radius: 4px;
-    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.05);
     box-shadow: 0 1px 1px rgba(0,0,0,0.05);
 }
 
@@ -46,6 +41,7 @@ body {
 .navbar-default .navbar-brand {
   color: #ffffff;
 }
+
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
   color: #00bc8c;
@@ -97,3 +93,19 @@ body {
 .navbar-default .navbar-toggle {
     border-color: #282828;
 }
+
+
+
+.div1 {
+  border:1px solid red;
+}
+
+.div1 .div2 {
+  border:1px solid green;
+}
+
+.div3 {
+  border:1px solid blue;
+}
+
+

@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var connect = require('gulp-connect');
 var template = require('gulp-template-html');
+var cleanCSS = require('gulp-clean-css');
 
 gulp.task('connect', function(){
   connect.server({
@@ -14,6 +15,7 @@ gulp.task('connect', function(){
 gulp.task('sass', function () {
   return gulp.src('./sass/*.scss')
       .pipe(sass({ errLogToConsole: true }))
+      .pipe(cleanCSS({debug: true}))
       .pipe(gulp.dest('./public/css'))
       .pipe(connect.reload());
 });
