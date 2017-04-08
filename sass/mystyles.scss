@@ -32,67 +32,104 @@ body {
 }
 
 .navbar-default {
-    background-color: #060606;
-}
-
-.navbar-default {
+  background-color: #060606;
   border-color: transparent;
-}
-.navbar-default .navbar-brand {
-  color: #ffffff;
-}
 
-.navbar-default .navbar-brand:hover,
-.navbar-default .navbar-brand:focus {
-  color: #00bc8c;
-  background-color: transparent;
-}
-.navbar-default .navbar-text {
-  color: #ffffff;
-}
-.navbar-default .navbar-nav > li > a {
-  color: #888888;
-}
-.navbar-default .navbar-nav > li > a:hover,
-.navbar-default .navbar-nav > li > a:focus {
-  color: #ffffff;
-  text-decoration:underline;
-  background-color: transparent;
-}
-.navbar-default .navbar-nav > .active > a,
-.navbar-default .navbar-nav > .active > a:hover,
-.navbar-default .navbar-nav > .active > a:focus {
-  color: #ffffff;
-  background-color: transparent
-}
+  .navbar-brand {
+    color: #ffffff;
+  }
 
-.navbar-default .navbar-collapse,
-.navbar-default .navbar-form {
-  border-color: transparent;
-}
+  .navbar-brand:hover
+  {
+    color: #00bc8c;
+    background-color: transparent;
+  }
 
-.navbar-default .navbar-toggle {
-  border-color: #28415b;
-}
-.navbar-default .navbar-toggle:hover,
-.navbar-default .navbar-toggle:focus {
-  background-color: #red;
-}
-.navbar-default .navbar-toggle .icon-bar {
-  background-color: #red;
-}
+  .navbar-brand:focus {
+    color: #00bc8c;
+    background-color: transparent;
+  }
 
-.navbar-default .navbar-toggle {
+  .navbar-text {
+    color: #ffffff;
+  }
+
+  .navbar-nav > li > a
+  {
+    color: #888888;
+  }
+
+  .navbar-nav > li > a:hover {
+    color: #ffffff;
+    text-decoration:underline;
+    background-color: transparent;
+  }  
+
+  .navbar-nav > li > a:focus {
+    color: #ffffff;
+    text-decoration:underline;
+    background-color: transparent;
+  }  
+
+  .navbar-nav > .active > a
+  {
+    color: #ffffff;
+    background-color: transparent;
+  }
+
+  .navbar-nav > .active > a:hover;
+  {
+    color: #ffffff;
+    background-color: transparent;
+  }
+
+  .navbar-nav > .active > a:focus {
+    color: #ffffff;
+    background-color: transparent;
+  }
+
+  .navbar-collapse
+  {
+    border-color: transparent;
+  }
+
+  .navbar-toggle {
+    border-color: #28415b;
+  }
+
+  .navbar-toggle:hover
+  {
+    background-color: #red;
+  }
+
+  .navbar-toggle:focus {
+    background-color: #red;
+  }  
+
+  .navbar-toggle .icon-bar {
+    background-color: #red;
+  }
+
+  .navbar-toggle {
+      border-color: #282828;
+  }
+
+  .navbar-toggle:hover
+  {
+      background-color: #282828;
+  }
+
+  .navbar-toggle:focus {
+      background-color: #282828;
+  }  
+
+  .navbar-toggle {
     border-color: #282828;
+  }
+
+
 }
 
-.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
-    background-color: #282828;
-}
- 
-.navbar-default .navbar-toggle {
-    border-color: #282828;
-}
 
 
 
