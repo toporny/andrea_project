@@ -37,97 +37,52 @@ body {
 
   .navbar-brand {
     color: #ffffff;
+    &:hover
+    {
+      color: #00bc8c;
+      background-color: transparent;
+    }
+    &:focus {
+      color: #00bc8c;
+      background-color: transparent;
+    }
   }
 
-  .navbar-brand:hover
-  {
-    color: #00bc8c;
-    background-color: transparent;
+  .navbar-nav {
+    > li {
+      > a {
+        color: #888888;
+        &:hover {
+          color: #ffffff;
+          text-decoration:underline;
+          background-color: transparent;
+        }
+        &:focus {
+          color: #ffffff;
+          text-decoration:underline;
+          background-color: transparent;
+        }
+      }
+    }
   }
 
-  .navbar-brand:focus {
-    color: #00bc8c;
-    background-color: transparent;
-  }
 
-  .navbar-text {
-    color: #ffffff;
-  }
-
-  .navbar-nav > li > a
-  {
-    color: #888888;
-  }
-
-  .navbar-nav > li > a:hover {
-    color: #ffffff;
-    text-decoration:underline;
-    background-color: transparent;
-  }  
-
-  .navbar-nav > li > a:focus {
-    color: #ffffff;
-    text-decoration:underline;
-    background-color: transparent;
-  }  
-
-  .navbar-nav > .active > a
-  {
+  .navbar-nav > .active > a {
     color: #ffffff;
     background-color: transparent;
-  }
-
-  .navbar-nav > .active > a:hover;
-  {
-    color: #ffffff;
-    background-color: transparent;
-  }
-
-  .navbar-nav > .active > a:focus {
-    color: #ffffff;
-    background-color: transparent;
-  }
-
-  .navbar-collapse
-  {
-    border-color: transparent;
-  }
-
-  .navbar-toggle {
-    border-color: #28415b;
-  }
-
-  .navbar-toggle:hover
-  {
-    background-color: #red;
-  }
-
-  .navbar-toggle:focus {
-    background-color: #red;
-  }  
-
-  .navbar-toggle .icon-bar {
-    background-color: #red;
-  }
-
-  .navbar-toggle {
-      border-color: #282828;
-  }
-
-  .navbar-toggle:hover
-  {
-      background-color: #282828;
-  }
-
-  .navbar-toggle:focus {
-      background-color: #282828;
-  }  
-
-  .navbar-toggle {
-    border-color: #282828;
+    &:hover 
+    {
+      color: #ffffff;
+      background-color: transparent;
+    }
+    &:focus {
+      color: #ffffff;
+      background-color: transparent;
+    }
   }
 
 
+ 
 }
 
 
