@@ -10,7 +10,7 @@ $brand-danger:          #E74C3C !default;
 body {
     font-family: "Roboto", "Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 14px;
-    line-height: 1.42857143;
+    line-height: 1.5;
     color: #888888;
     background-color: #060606;
 }
@@ -21,6 +21,11 @@ body {
     border: 1px solid transparent;
     border-radius: 4px;
     box-shadow: 0 1px 1px rgba(0,0,0,0.05);
+    .picture_content {
+      padding:0px;
+      margin:5px;
+      border:1px solid #333333;
+    }
 }
 
 .navbar {
@@ -37,8 +42,7 @@ body {
 
   .navbar-brand {
     color: #ffffff;
-    &:hover
-    {
+    &:hover {
       color: #00bc8c;
       background-color: transparent;
     }
@@ -64,22 +68,22 @@ body {
         }
       }
     }
+    > .active {
+      > a {
+        color: #ffffff;
+        background-color: transparent;
+        &:hover {
+          color: #ffffff;
+          background-color: transparent;
+        } &:focus {
+          color: #ffffff;
+          background-color: transparent;
+        }
+      }
+    }    
   }
 
 
-  .navbar-nav > .active > a {
-    color: #ffffff;
-    background-color: transparent;
-    &:hover 
-    {
-      color: #ffffff;
-      background-color: transparent;
-    }
-    &:focus {
-      color: #ffffff;
-      background-color: transparent;
-    }
-  }
 
 
  
