@@ -1,0 +1,73 @@
+<!-- build:title -->Welcome to my projects<!-- /build:title -->
+
+<!-- build:menu1 --><!-- /build:menu1 -->
+<!-- build:menu2 -->active<!-- /build:menu2 -->
+<!-- build:menu3 --><!-- /build:menu3 -->
+<!-- build:menu4 --><!-- /build:menu4 -->
+<!-- build:menu5 --><!-- /build:menu5 -->
+
+<!-- build:content1 -->
+<h1>Fisher Price Talking Chatter Smartphone</h1>
+<img class="picture_content" width="100% "src="img/project4/fisher_price_2.jpg" alt="fisher price image 2">
+
+<p>The Chatter Telephone is a classic Fisher Price toy that has been sold since 1962. The design has evolved over the years, but in 2010 the original ‘classic’ Chatter phone was brought back into the limelight in the Disney / Pixar film Toy Story 3 where the phone helped Woody escape from Sunnyside Daycare.</p>
+<p>To coincide with this movie release, Fisher Price released a new Talking Chatter Telephone – an all-plastic model that recreated the boxy shape of the 1960s original but with the addition of some voice clips from the movie controlled by the rotary dial.</p>
+<p>I had bought one of these for my infant son (who loved the movie) but the toy didn’t get him too excited. So, I decided to turn the phone into a weekend project… introducing the Talking Chatter Smartphone.</p>
+<p>At the heart of the Chatter Smartphone I’m using a Raspberry Pi Model B+ to give the phone more brains than it was built with. A tiny WiFi dongle provides wireless network access, and a custom Python script (code below) running on startup provides all of the logic.</p>
+<p>Wherever possible, I’ve used the original components and controls to interact with the phone. I also wanted to retain the ‘factory’ look of the phone, so I avoided adding a screen or any unnecessary buttons.</p>
+<p>Inputs are limited to the original rotary dial plus an ‘on hook’ sensor I added. Outputs are audio through the built-in speaker and eye movements controlled by a servo I added.</p>
+<p>The phone uses JSON format APIs to pull data from various online services. Right now it’s configured to pull from Forecast.io for weather and from Rotten Tomatoes for movie information, but it could easily be extended to use other APIs.</p>
+<p>The push notification system uses a Twitter account to pull new alerts from. Those alerts are pushed onto the Twitter account using IFTTT – either pre-defined recipes or alerts driven by my iPhone (e.g. when I leave a geofence).</p>
+
+<h2>Fun features</h2>
+<p>The Chatter Smartphone uses the OS9 boot sound (or, as I prefer to think of it, the Wall-E startup sound) on startup. This isn’t just for show, it’s also handy so I know when the Pi has finished booting and is ready for an SSH connection – every Pi should have this!</p>
+<p>The phone can work with any standard Web Service (JSON API). It would be a two minute job to swap weather forecasts for a Quote of the Day API or, more usefully, a stocks or exchange rates api.</p>
+<p>Need more volume? A fun hack would be to extend the Pi’s audio jack out to the back panel of the phone, potentially making a Fisher Price phone the centre of a high-end Hi-Fi system.</p>
+<p>The push notification system can take any input from IFTTT. Currently, I have it alerting the phone when: I leave work; the weather forecast is for rain tomorrow; when my garden office temperature falls below 10 degrees centigrade; and when the International Space Station is soon passing overhead.</p>
+
+<h2>Mechanical build</h2>
+<p>First I used a craft knife and a rotary cutter to take out the original battery box to make room for the Raspberry Pi. At the same time I removed the original PCB from above the battery box. The original set of three microswitches that read the rotary dial position were kept, but the microswitch that detected front axel movement was removed.</p>
+<p>The rotary dial uses a clever binary-like encoding mechanism, with grooves and ridges on the dial cylinder pushing and releasing three microswitches in various sequences. The result is that the phone can detect five dial positions: at rest; position 1-2; position 3-5; position 6-8; position 9-0.</p>
+<p>I considered improving the granularity of the dial – e.g. using barcode-style lines and an IR light/sensor – to allow all dial positions to be detected, but ultimately it felt more authentic to retain the physical limitations of the original design.</p>
+<p>I removed the original metal bar that linked eye movements to the mechanical turning of the front axle. In its place I added a tiny 9g servo which I hot-glued to the post that carries the eyes. Using some stiff wire I created a custom linkage between the servo horn and the eyes, allowing complete control of eye movements up, down and anywhere in between.</p>
+<p>The only other tweak was to increase the weight of the receiver so that it reliably pressed and held the on-hook sensor. Since the handset was completely sealed without any screws or other ways in, I opted to fill it with sand through the cord hole, then hot-glued the opening with the cord held in place.</p>
+
+<h2>Electronics</h2>
+<p>The electronics in this project are almost non-existent: no resistors, diodes or anything like that. To keep things simple, I simply soldered female pin headers onto the original dial wiring and utilised the Pi’s internal pull-up resistors to make it work reliably.</p>
+<p>The only added component is the on-hook sensor which I added to detect when the receiver is on the cradle. In version one of the project I used the original front axle microswitch for the on-hook sensor, but it didn’t work reliably so I replaced it with a simple light-action pushbutton from Maplin.</p>
+<p>For a while I used the original internal speaker from the Fisher Price toy which I wired directly to a 3.5mm jack and into the Raspberry Pi’s audio jack. Using the Vol app (link below), I was able to boost the volume to a decent level.</p>
+<p>But I wanted more volume, so I bought a �10 ($15) powered speaker from my local supermarket – the kind of thing usually plugged into an iPod and used to annoy everyone on a bus. The speaker takes power from USB audio in through a standard headphone jack. I disassembled the speaker and its associated PCB, discarded the housing and mounted the parts in place of the original speaker inside the phone.</p>
+<p>A nice feature of the speaker – certainly at this low price – is that it also acts as a Bluetooth receiver. I’m not currently using that facility, but it would be fairly straightforward to add either a physical switch or software mode that turned off the “headphone in” detection on the speaker so that the phone could be used as a Bluetooth speaker for phones and computers. (Although adding an AirPlay receiver might be a simpler – and cooler – option.)</p>
+
+
+
+<!-- /build:content1 -->
+
+<!-- build:content2 -->
+<h2>Operating System</h2>
+<p>This code should work with just about any Raspberry Pi distribution. Personally, I always use Google Coder because it’s really easy to get the Pi up and running ‘headless’, without ever connecting it to a keyboard, mouse or monitor. Even WiFi connections are automatic with Google Coder (you enter the SSID and password via a config text file on your PC/Mac) so it’s a really simple way to get up and running fast.</p>
+<p>As soon as the Pi has booted you can access it via a browser (it announces itself at http://coder.local) and from there you can define a password which then allows SSH and SFTP connections from any machine on your network – dead easy.</p>
+
+
+<h2>Audio</h2>
+<p>Before I took the phone apart I recorded all of the original sound clips as MP3 files. I added a mode where the phone would play these clips (acting as a completely ‘virgin’ Talking Chatter phone) whenever the receiver is on the hook.</p>
+<p>For the interactive voice menu sounds I searched Fiverr for someone who would be able to emulate the voice that Teddy Newton did in the Toy Story 3 movie. I finally hit upon the amazingly talented Chris Cowan who I commissioned to record the voice options I wanted.</p>
+<p>He recorded all of the menu options, the “Hey, pal…” push notification alert, plus a few common messages that the phone might need to say, e.g. “Looks like rain tomorrow” (handy in Scotland) and “Woody has escaped from Sunnyside” which I use as an alert for my family when I leave work at the end of the day.</p>
+<p>When the phone needs to say something that I haven’t already recorded as an MP3 – like the top movies this week – the phone calls the (undocumented) Google Translate text-to-speech API to get a natural voice output. Right now Google is using a female voice for that API, so I asked Chris to record a “this lady has the details” clip so that the handover would seem smooth.</p>
+
+
+<img class="picture_content" width="100% "src="img/project4/fisher_price_1.jpg" alt="fisher price image 1">
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/rHnDl6YjOx8?ecver=1" frameborder="0" allowfullscreen></iframe>
+
+
+<!-- <p class="text-center"><a href="#">watch all images</a></p> -->
+
+<!-- /build:content2 -->
+
+<!-- build:content3 -->
+<img width="100%" height="100%" src="img/banners/baner3.jpg" >
+<!-- /build:content3 -->
+
+<!-- build:footer -->
+footer srooter
+<!-- /build:footer -->
