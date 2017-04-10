@@ -1,0 +1,57 @@
+<!-- build:title -->Welcome to my projects<!-- /build:title -->
+
+<!-- build:menu1 --><!-- /build:menu1 -->
+<!-- build:menu2 -->active<!-- /build:menu2 -->
+<!-- build:menu3 --><!-- /build:menu3 -->
+<!-- build:menu4 --><!-- /build:menu4 -->
+<!-- build:menu5 --><!-- /build:menu5 -->
+
+<!-- build:content1 -->
+<h1>A CHESS-PLAYING ROBOT</h1>
+
+
+<p>Computers and chess have been a potent combination ever since the appearance of the first chess-playing computers in the 1970s. You might even be able to play a game of chess on the device you are using to read this blog post! For digital makers, though, adding a Raspberry Pi into the mix can be the first step to building something a little more exciting. Allow us to introduce you to <a href="http://www.joeymeyer.com/">Joey Meyer</a>‘s chess-playing robot, the <a href="http://www.raspberryturk.com/">Raspberry Turk</a>.</p>
+
+
+<h3>A historical hoax</h3>
+<p>Joey explains that he first encountered the Mechanical Turk through <a href="https://www.amazon.co.uk/Turk-Famous-Eighteenth-Century-Chess-Playing-Machine/dp/B000HWZ28Q">a book by Tom Standage</a>. A famous example of mechanical trickery, the original Turk was advertised as a chess-playing automaton, capable of defeating human opponents and solving complex puzzles.</p>
+
+<img class="picture_content" src="img/project6/800px-Kempelen_chess1-500x534.jpg">
+
+<p>Its inner workings a secret, the Turk toured Europe for the best part of a century, confounding everyone who encountered it. Unfortunately, it turned out not to be a fabulous example of early robotic engineering after all. Instead, it was just an elaborate illusion. The awesome chess moves were not being worked out by the clockwork brain of the automaton, but rather by a human chess master who was cunningly concealed inside the casing.</p>
+
+<h3>Building a modern Turk</h3>
+<p>A <a href="https://en.wikipedia.org/wiki/The_Turk#Final_years_and_beyond">modern version of the Mechanical Turk</a> was constructed in the 1980s. However, the build cost $120,000. At that price, it would have been impossible for most makers to create their own version. Impossible, that is, until now: Joey uses a Raspberry Pi 3 to drive the Raspberry Turk, while a Raspberry Pi Camera Module handles computer vision.</p>
+
+<img class="picture_content" src="img/project6/wholetable-500x387.jpg">
+
+<p>Joey’s Raspberry Turk is built into a neat wooden table. All of the electronics are housed in a box on one side. The chessboard is painted directly onto the table’s surface. In order for the robot to play, a Camera Module located in a 3D-printed housing above the table takes an image of the chessboard. The image is then analysed to determine which pieces are in which positions at that point. By tracking changes in the&nbsp;positions of the pieces, the Raspberry Turk can determine which moves have been made, and which piece should move next.&nbsp;To train the system, Joey had to build a large dataset to validate a computer vision model. This involved painstakingly moving pieces by hand and collecting multiple images of each possible position.</p>
+
+<p>Joey individually fitted the chess pieces with tiny sections of metal dowel so that the magnet on the arm could pick them up.</p>
+
+<h3>Programming the Raspberry Turk</h3>
+
+<p>The Raspberry Turk is controlled by a daemon process that runs a perception/action sequence, and the status updates automatically as the pieces are moved. The code is written almost entirely in Python. It is all available on Joey’s <a href="https://github.com/joeymeyer/raspberryturk">GitHub</a> repo for the project, together with his notebooks on the project.</p>
+
+<img class="picture_content" src="img/project6/raspberryturk-screenshot-500x260.jpg">
+
+<p>The AI backend that gives the robot its chess-playing ability is currently <a href="https://stockfishchess.org/">Stockfish</a>, a strong open-source chess engine. Joey says he would like to build his own engine when he has time. For the moment, though, he’s confident that this AI will prove a worthy opponent.</p>
+
+<p>The <a href="http://www.raspberryturk.com/">project website</a> goes into much more detail than we are able to give here. We’d definitely recommend checking it out. If you have been experimenting with any robotics or computer vision projects like this, please do let us know in the comments!</p>
+
+<!-- /build:content1 -->
+
+<!-- build:content2 -->
+<iframe width="100%" height="400" src="https://www.youtube.com/embed/lpJIBVU_WJE?ecver=1" frameborder="0" allowfullscreen></iframe>
+
+
+
+<!-- /build:content2 -->
+
+<!-- build:content3 -->
+<img width="100%" height="400%" src="img/banners/baner3.jpg" >
+<!-- /build:content3 -->
+
+<!-- build:footer -->
+footer srooter
+<!-- /build:footer -->
