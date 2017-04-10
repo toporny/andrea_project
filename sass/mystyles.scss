@@ -85,25 +85,18 @@ body {
     }    
   }
 
-
-
-
- 
 }
 
-
-
-
-.div1 {
-  border:1px solid red;
+a.link_red {
+  color: red;
+  &:visited {
+    color: red;
+  }
+  &:active {
+    color:  red;
+  }
+  &:hover {
+    color: #FF6666;
+  }
 }
-
-.div1 .div2 {
-  border:1px solid green;
-}
-
-.div3 {
-  border:1px solid blue;
-}
-
 
