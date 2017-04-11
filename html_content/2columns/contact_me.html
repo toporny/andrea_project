@@ -10,9 +10,7 @@
 <script src="js/jquery.validate.min.js"></script>
 <script src="js/bootbox.min.js"></script>
 <script>
-	jQuery.validator.addMethod("letters_and_spaces_only", function(value, element) {
-	    return this.optional(element) || /^[a-zA-Z ]+$/i.test(value);
-	}, "letters only please");
+	form_init();
 </script>
 <!-- /build:js_script -->
 
@@ -27,28 +25,28 @@
 	<div class="form-group">
 		<label class="control-label col-sm-4" for="first_name">First Name: <span class="error">*</span></span></label>
 		<div class="col-sm-6">
-			<input type="text" class="form-control" name="first_name" placeholder="enter first name" limit="20">
+			<input type="text" class="form-control" name="first_name" placeholder="enter first name" maxlength="50">
 		</div>
 	</div>
 
 	<div class="form-group">
 		<label class="control-label col-sm-4" for="last_name">Last Name: <span class="error">*</span></span></label>
 		<div class="col-sm-6">
-			<input type="text" class="form-control" name="last_name" placeholder="enter last name">
+			<input type="text" class="form-control" name="last_name" placeholder="enter last name" maxlength="50">
 		</div>
 	</div>
 
 	<div class="form-group">
 		<label class="control-label col-sm-4" for="email">Email: <span class="error">*</span></span></label>
 		<div class="col-sm-6">
-			<input type="email" class="form-control" name="email" placeholder="enter email">
+			<input type="email" class="form-control" name="email" placeholder="enter email" maxlength="50">
 		</div>
 	</div>
 
 	<div class="form-group">
 		<label class="control-label col-sm-4" for="last_name">Company:</label>
 		<div class="col-sm-6">
-			<input type="text" class="form-control" name="company" placeholder="company (optional)">
+			<input type="text" class="form-control" name="company" placeholder="company (optional)" maxlength="50">
 		</div>
 	</div>
 

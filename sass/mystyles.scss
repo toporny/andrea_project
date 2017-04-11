@@ -1,10 +1,8 @@
-$gray:                  #464545 !default;
 $white:                 #FFFFFF !default;
-$brand-primary:         #375a7f !default;
+$dark:                  #060606 !default;
+$gray:                  #888888 !default;
+$dark-gray:             #222222 !default;
 $brand-red:             #CC0000 !default;
-$brand-info:            #3498DB !default;
-$brand-warning:         #F39C12 !default;
-$brand-danger:          #E74C3C !default;
 
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
 @import url("https://fonts.googleapis.com/css?family=Russo+One");
@@ -14,8 +12,8 @@ body {
     font-family: "Roboto", "Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 14px;
     line-height: 1.5;
-    color: #888888;
-    background-color: #060606;
+    color: $gray;
+    background-color: $dark;
 }
 
 h1 {
@@ -41,7 +39,7 @@ h3 {
 
 .panel {
     margin-bottom: 20px;
-    background-color: #222222;
+    background-color: $dark-gray;
     border: 1px solid transparent;
     border-radius: 4px;
     box-shadow: 0 1px 1px rgba(0,0,0,0.05);
@@ -63,13 +61,14 @@ h3 {
 }
 
 .navbar-default {
-  background-color: #060606;
+  background-color: $dark;
   border-color: transparent;
 
   .navbar-brand {
     color: $white;
+    padding-top:13px;
     &:hover {
-      color: $brand-red;
+      color: white;
       background-color: transparent;
     }
     &:focus {
@@ -80,15 +79,17 @@ h3 {
 
   .navbar-nav {
     > li {
+      font-family: 'Russo One', sans-serif;
+      text-transform: uppercase;
       > a {
         color: #888888;
         &:hover {
-          color: #ffffff;
+          color: red;
           text-decoration:underline;
           background-color: transparent;
         }
         &:focus {
-          color: #ffffff;
+          color: $white;
           text-decoration:underline;
           background-color: transparent;
         }
@@ -96,13 +97,13 @@ h3 {
     }
     > .active {
       > a {
-        color: #ffffff;
+        color: $white;
         background-color: transparent;
         &:hover {
-          color: #ffffff;
+          color: red;
           background-color: transparent;
         } &:focus {
-          color: #ffffff;
+          color: $white;
           background-color: transparent;
         }
       }
@@ -145,4 +146,22 @@ a.link_red {
 
 .margin_t20 {
   margin-top:20px;
+}
+
+
+.btn-sort { 
+  color: #ffffff; 
+  background-color: #BD1B3B; 
+  border-color: #690240; 
+  &:hover, 
+  &:focus, 
+  &:active {
+    color: #ffffff; 
+ } 
+} 
+ 
+ 
+.btn-sort .badge { 
+  color: #BD1B3B; 
+  background-color: #ffffff; 
 }

@@ -6,6 +6,19 @@
 <!-- build:menu4 --><!-- /build:menu4 -->
 <!-- build:menu5 --><!-- /build:menu5 -->
 
+
+<!-- build:js_script -->
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/bootbox.min.js"></script>
+<script>
+	document.getElementById("sort_projects").onclick = function() {
+		sortUnorderedList("list_to_sort", desc);
+		desc = !desc;
+		return false;
+	}
+</script>
+<!-- /build:js_script -->
+
 <!-- build:content1 -->
 <h2>Projects</h2>
 <div class="row text-center margin_t20">
@@ -55,44 +68,47 @@
 <!-- /build:content1 -->
 
 <!-- build:content2 -->
-<h2>External Projects</h2>
+<input type="button" class="pull-right btn btn-sort btn-xs" id="sort_projects" value="toggle sort"/>
 
-	<ul>
+<h2>External Projects</h2>
+ 
+ 
+	<ul id="list_to_sort">
 		<li>
-			<a class="link_red" href="https://shkspr.mobi/blog/2015/11/raspberry-pi-zero-hidden-in-an-xbox-controller/">xbox zero controller</a>
+			<a class="link_red" href="https://shkspr.mobi/blog/2015/11/raspberry-pi-zero-hidden-in-an-xbox-controller/">(2015/12/30) Xbox zero controller</a>
 		</li>
 		<li>
-			<a class="link_red" href="http://stratux.me/">Stratux</a>
+			<a class="link_red" href="http://stratux.me/">(2015/07/09) Stratux</a>
 		</li>
 		<li>
-			<a class="link_red" href="https://hackaday.io/project/4223-raspberry-tor-router">Raspberry Tor Router</a>
+			<a class="link_red" href="https://hackaday.io/project/4223-raspberry-tor-router">(2016/01/22) Raspberry Tor Router</a>
 		</li>
 		<li>
-			<a class="link_red" href="http://www.instructables.com/id/Raspberry-Pi-Multi-Room-Music-Player/">Raspberry Pi Multi-Room Music Player</a>
+			<a class="link_red" href="http://www.instructables.com/id/Raspberry-Pi-Multi-Room-Music-Player/">(2015/04/11) Raspberry Pi Multi-Room Music Player</a>
 		</li>
 		<li>
-			<a class="link_red" href="http://www.instructables.com/id/WhatsApp-on-Raspberry-Pi/">WhatsApp on Raspberry Pi</a>
+			<a class="link_red" href="http://www.instructables.com/id/WhatsApp-on-Raspberry-Pi/">(2014/12/04) WhatsApp on Raspberry Pi</a>
 		</li>
 		<li>
-			<a class="link_red" href="https://learn.adafruit.com/raspberry-pi-face-recognition-treasure-box?view=all">face-recognition-treasure-box?</a>
+			<a class="link_red" href="https://learn.adafruit.com/raspberry-pi-face-recognition-treasure-box?view=all">(2014/01/24) Face recognition treasure box</a>
 		</li>
 		<li>
-			<a class="link_red" href="http://drstrangelove.net/2013/12/raspberry-pi-power-cat-feeder-updates/">cat-feeder-</a>
+			<a class="link_red" href="http://drstrangelove.net/2013/12/raspberry-pi-power-cat-feeder-updates/">(2013/12/20) Pi Cat feeder</a>
 		</li>
 		<li>
-			<a class="link_red" href="https://logicethos.com/blog/pitelephone-raspberry-pi-retro-dial-phone/">Raspberry Pi retro dial phone</a>
+			<a class="link_red" href="https://logicethos.com/blog/pitelephone-raspberry-pi-retro-dial-phone/">(2012/12/01) Raspberry Pi retro dial phone</a>
 		</li>
 		<li>
-			<a class="link_red" href="http://www.daveakerman.com/?p=592">Raspberry Pi Sends Live Images from Near Space</a>
+			<a class="link_red" href="http://www.daveakerman.com/?p=592">(2012/07/16) Raspberry Pi Sends Live Images from Near Space</a>
 		</li>
 		<li>
-			<a class="link_red" href="http://retromaccast.libsyn.com/episode-297-i-shall-call-it-mini-mac">I shall call it Mini Mac!</a>
+			<a class="link_red" href="http://retromaccast.libsyn.com/episode-297-i-shall-call-it-mini-mac">(2013/08/24) I shall call it Mini Mac!</a>
 		</li>
 		<li>
-			<a class="link_red" href="http://www.instructables.com/id/Raspberry-Pi-Wall-Mounted-Google-Calendar/">Raspberry Pi Wall Mounted Google Calendar</a>
+			<a class="link_red" href="http://www.instructables.com/id/Raspberry-Pi-Wall-Mounted-Google-Calendar/">(2014/04/02) Raspberry Pi Wall Mounted Google Calendar</a>
 		</li>
 		<li>
-			<a class="link_red" href="http://mkcastor.com/2014/01/02/pipad-build/">The Raspberry Pi Tablet</a>
+			<a class="link_red" href="http://mkcastor.com/2014/01/02/pipad-build/">(2014/01/02) The Raspberry Pi Tablet</a>
 		</li>
 	</ul>
 

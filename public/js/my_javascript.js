@@ -1,24 +1,67 @@
 
-children = document.getElementById('changeCSSid');
-toogle_var = 1;
+// this part of code allows to choose beetwean my DARK overrided bootstrap scheme and oryginal bootstrap scheme
+children_menu = document.getElementById('changeCSSid');
+toogle_var = 1; // 1-my dark scheme. 0-bootstrap scheme
 
-children.addEventListener('click', function (e) { 
+children_menu.addEventListener('click', function (e) { 
 	if (toogle_var == 1) {
 		document.getElementById("my_css").href = "";
-		document.getElementById("changeCSSid").innerHTML = '<a href="#">My dark theme</a>';
+		document.getElementById("changeCSSid").innerHTML = '<a href="#">My dark theme</a>'; // new menu content 
 		toogle_var = 0;
 	} else {
 		document.getElementById("my_css").href = "css/mystyles.css";
-		document.getElementById("changeCSSid").innerHTML = '<a href="#">Bootstrap white theme</a>';
+		document.getElementById("changeCSSid").innerHTML = '<a href="#">Bootstrap white theme</a>'; // new menu content 
 		toogle_var = 1;
 	}
 
 }, true);
 
 
+// project sorting, pure j
+var desc = false;
+function sortUnorderedList(ul, sortDescending) {
+  if(typeof ul == "string")
+  ul = document.getElementById(ul);
+
+  var lis = ul.getElementsByTagName("li");
+  var vals = [];
+  var vals_a = [];
+
+  for(var i = 0, l = lis.length; i < l; i++) {
+    a = lis[i].getElementsByTagName("a");
+    //console.log(lis[i].getElementsByTagName("a"));
+    console.log('a[0].innerHTML',a[0].innerHTML);
+
+    vals.push(lis[i].innerHTML);
+    vals_a.push(a[0].innerHTML);
+    //vals.push(i);
+
+  }
+
+  vals.sort();
+  console.log('vals[0]', vals[0]);
+
+  if(sortDescending)
+  vals.reverse();
+
+   for(var i = 0, l = lis.length; i < l; i++)
+    lis[i].innerHTML = vals[i];
+}
 
 
-$(function() {
+
+
+
+function form_init() { 
+  
+  jQuery.validator.addMethod("letters_and_spaces_only", function(value, element) {
+    return this.optional(element) || /^[a-z]{1}[a-z ,.'-]+$/i.test(value);
+  }, "letters only please");
+
+  jQuery.validator.addMethod("my_email", function(value, element) {
+    return this.optional(element) || /^([a-zA-Z0-9_\-\.\+]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/i.test(value);
+  }, "email address invaild");
+
   $("form[name='contact_me']").validate({  // Initialize form validation on the registration form.
     // Specify validation rules
     rules: {
@@ -31,7 +74,7 @@ $(function() {
       },
       last_name: {
         required: true,
-        letters_and_spaces_only: true,
+        letters_and_spaces_only: true, // this is my definition of validating string
         minlength: 2
       },
       content: {
@@ -40,7 +83,8 @@ $(function() {
       },
       email: {
         required: true,
-        email: true
+        email: true,
+        my_email: true // this is my definition of validating email
       }
     },
     messages: {     // Specify validation error messages
@@ -52,20 +96,27 @@ $(function() {
     // if everything is ok then send
     submitHandler: function(form) {
       
-      var dialog = bootbox.dialog({
-          title: 'Message',
-          closeButton: false,
-          message: '<p><i class="fa fa-spin fa-spinner"></i> Sending...</p>'
+      var dialog = bootbox.dialog({ // bootbox dialog from bootbox.min.js (http://bootboxjs.com/)
+        title: 'Message',
+        closeButton: false,
+        message: '<p><i class="fa fa-spin fa-spinner"></i> Sending...</p>' // nice spinner comes from fonts/FontAwesome (http://fontawesome.io/icon/spinner/)
       });
       dialog.init(function(){
-          setTimeout(function(){
-              dialog.find('.bootbox-body').html('Message has been sent. </br> <p class="text-right"><button class="text-right btn btn-default bootbox-close-button">close</button></p>');
-          }, 3000);
+        setTimeout(function(){
+          dialog.find('.bootbox-body').html('Message has been sent. </br> <p class="text-right"><button class="text-right btn btn-default bootbox-close-button">close</button></p>');
+          // clear the form after sending
+          document.getElementsByName("first_name")[0].value = '';
+          document.getElementsByName("last_name")[0].value = '';
+          document.getElementsByName("email")[0].value = '';
+          document.getElementsByName("company")[0].value = '';
+          document.getElementsByName("content")[0].value = '';
+        }, 3000);
       });
       
-      // form.submit(); // this is removed purposly because I don't have any backed there yet
+      // form.submit(); // this is removed purpously because I don't have any backed there yet
       return false;
 
     }
   });
-});
+
+}
