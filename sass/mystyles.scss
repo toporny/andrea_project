@@ -7,6 +7,8 @@ $brand-warning:         #F39C12 !default;
 $brand-danger:          #E74C3C !default;
 
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
+@import url("https://fonts.googleapis.com/css?family=Russo+One");
+
 
 body {
     font-family: "Roboto", "Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -14,6 +16,27 @@ body {
     line-height: 1.5;
     color: #888888;
     background-color: #060606;
+}
+
+h1 {
+  font-family: 'Russo One', sans-serif;
+  font-size: 30px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-family: 'Russo One', sans-serif;
+  font-size: 25px;
+  margin-top: 15px;
+  margin-bottom: 5px;      
+}
+
+h3 {
+  font-family: 'Russo One', sans-serif;
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 3px;      
 }
 
 .panel {
@@ -108,61 +131,18 @@ a.link_red {
 
 }
 
-.modal-content {
-  position: relative;
-  background-color: #545454;
-  border: 1px solid #999999;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 6px;
-  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
-  color:white;
+.modal {
+  &-content {
+    position: relative;
+    background-color: #545454;
+    border: 1px solid #999999;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+    color:white;
+  }
 }
-.modal-backdrop {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1040;
-  background-color: #000000;
-}
-.modal-header {
-  padding: 15px;
-  border-bottom: 1px solid #FFFFFF;
-}
-.modal-header .close {
-  margin-top: -2px;
-}
-.modal-title {
-  margin: 0;
-  line-height: 1.42857143;
-}
-.modal-body {
-  position: relative;
-  padding: 20px;
-}
-.modal-footer {
-  padding: 20px;
-  text-align: right;
-  border-top: 1px solid #464545;
-}
-.modal-footer .btn + .btn {
-  margin-left: 5px;
-  margin-bottom: 0;
-}
-.modal-footer .btn-group .btn + .btn {
-  margin-left: -1px;
-}
-.modal-footer .btn-block + .btn-block {
-  margin-left: 0;
-}
-.modal-scrollbar-measure {
-  position: absolute;
-  top: -9999px;
-  width: 50px;
-  height: 50px;
-  overflow: scroll;
-}
+
 .margin_t20 {
   margin-top:20px;
 }

@@ -10,11 +10,10 @@
 <script src="js/jquery.validate.min.js"></script>
 <script src="js/bootbox.min.js"></script>
 <script>
-jQuery.validator.addMethod("letters_and_spaces_only", function(value, element) {
-    return this.optional(element) || /^[a-zA-Z ]+$/i.test(value);
-}, "letters only please");
+	jQuery.validator.addMethod("letters_and_spaces_only", function(value, element) {
+	    return this.optional(element) || /^[a-zA-Z ]+$/i.test(value);
+	}, "letters only please");
 </script>
-
 <!-- /build:js_script -->
 
 
