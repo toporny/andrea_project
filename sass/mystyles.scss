@@ -1,6 +1,7 @@
 $gray:                  #464545 !default;
+$white:                 #FFFFFF !default;
 $brand-primary:         #375a7f !default;
-$brand-success:         #00bc8c !default;
+$brand-red:             #CC0000 !default;
 $brand-info:            #3498DB !default;
 $brand-warning:         #F39C12 !default;
 $brand-danger:          #E74C3C !default;
@@ -43,13 +44,13 @@ body {
   border-color: transparent;
 
   .navbar-brand {
-    color: #ffffff;
+    color: $white;
     &:hover {
-      color: #00bc8c;
+      color: $brand-red;
       background-color: transparent;
     }
     &:focus {
-      color: #00bc8c;
+      color: $brand-red;
       background-color: transparent;
     }
   }
@@ -100,3 +101,68 @@ a.link_red {
   }
 }
 
+
+.error {
+  color: #FF0000;
+  font-weight:normal;
+
+}
+
+.modal-content {
+  position: relative;
+  background-color: #545454;
+  border: 1px solid #999999;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+  color:white;
+}
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1040;
+  background-color: #000000;
+}
+.modal-header {
+  padding: 15px;
+  border-bottom: 1px solid #FFFFFF;
+}
+.modal-header .close {
+  margin-top: -2px;
+}
+.modal-title {
+  margin: 0;
+  line-height: 1.42857143;
+}
+.modal-body {
+  position: relative;
+  padding: 20px;
+}
+.modal-footer {
+  padding: 20px;
+  text-align: right;
+  border-top: 1px solid #464545;
+}
+.modal-footer .btn + .btn {
+  margin-left: 5px;
+  margin-bottom: 0;
+}
+.modal-footer .btn-group .btn + .btn {
+  margin-left: -1px;
+}
+.modal-footer .btn-block + .btn-block {
+  margin-left: 0;
+}
+.modal-scrollbar-measure {
+  position: absolute;
+  top: -9999px;
+  width: 50px;
+  height: 50px;
+  overflow: scroll;
+}
+.margin_t20 {
+  margin-top:20px;
+}

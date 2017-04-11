@@ -16,10 +16,6 @@ children.addEventListener('click', function (e) {
 }, true);
 
 
-jQuery.validator.addMethod("letters_and_spaces_only", function(value, element) {
-    return this.optional(element) || /^[a-zA-Z ]+$/i.test(value);
-}, "letters only please");
-
 
 
 $(function() {
@@ -38,6 +34,10 @@ $(function() {
         letters_and_spaces_only: true,
         minlength: 2
       },
+      content: {
+        required: true,
+        minlength: 2
+      },
       email: {
         required: true,
         email: true
@@ -51,7 +51,21 @@ $(function() {
 
     // if everything is ok then send
     submitHandler: function(form) {
-      form.submit();
+      
+      var dialog = bootbox.dialog({
+          title: 'Message',
+          closeButton: false,
+          message: '<p><i class="fa fa-spin fa-spinner"></i> Sending...</p>'
+      });
+      dialog.init(function(){
+          setTimeout(function(){
+              dialog.find('.bootbox-body').html('Message has been sent. </br> <p class="text-right"><button class="text-right btn btn-default bootbox-close-button">close</button></p>');
+          }, 3000);
+      });
+      
+      // form.submit(); // this is removed purposly because I don't have any backed there yet
+      return false;
+
     }
   });
 });
