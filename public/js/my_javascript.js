@@ -19,36 +19,20 @@ children_menu.addEventListener('click', function (e) {
 
 // project sorting, pure j
 var desc = false;
-function sortUnorderedList(ul, sortDescending) {
-  if(typeof ul == "string")
-  ul = document.getElementById(ul);
 
-  var lis = ul.getElementsByTagName("li");
-  var vals = [];
-  var vals_a = [];
-
-  for(var i = 0, l = lis.length; i < l; i++) {
-    a = lis[i].getElementsByTagName("a");
-    //console.log(lis[i].getElementsByTagName("a"));
-    console.log('a[0].innerHTML',a[0].innerHTML);
-
-    vals.push(lis[i].innerHTML);
-    vals_a.push(a[0].innerHTML);
-    //vals.push(i);
-
+function sortUnorderedList(sortWay) {
+  var $list = $("#mylist");
+  if (sortWay) {
+    $list.children().detach().sort(function(a, b) {
+      return $(a).text().localeCompare($(b).text());
+    }).appendTo($list);
+  } else {
+    $list.children().detach().sort(function(a, b) {
+      return $(b).text().localeCompare($(a).text());
+    }).appendTo($list);
   }
 
-  vals.sort();
-  console.log('vals[0]', vals[0]);
-
-  if(sortDescending)
-  vals.reverse();
-
-   for(var i = 0, l = lis.length; i < l; i++)
-    lis[i].innerHTML = vals[i];
 }
-
-
 
 
 
