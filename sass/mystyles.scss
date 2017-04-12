@@ -3,6 +3,7 @@ $dark:                  #060606 !default;
 $gray:                  #888888 !default;
 $dark-gray:             #222222 !default;
 $brand-red:             #CC0000 !default;
+$light-red:             #FF2A2A !default;
 
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
 @import url("https://fonts.googleapis.com/css?family=Russo+One");
@@ -89,7 +90,7 @@ h3 {
       > a {
         color: #888888;
         &:hover {
-          color: red;
+          color: $light-red;
           text-decoration:underline;
           background-color: transparent;
         }
@@ -105,7 +106,7 @@ h3 {
         color: $white;
         background-color: transparent;
         &:hover {
-          color: red;
+          color: $light-red;
           background-color: transparent;
         } &:focus {
           color: $white;
@@ -118,12 +119,12 @@ h3 {
 }
 
 a.link_red {
-  color: red;
+  color: $light-red;
   &:visited {
-    color: red;
+    color: $light-red;
   }
   &:active {
-    color:  red;
+    color:  $light-red;
   }
   &:hover {
     color: #FF6666;
