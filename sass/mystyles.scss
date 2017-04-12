@@ -2,6 +2,7 @@ $white:                 #FFFFFF !default;
 $dark:                  #060606 !default;
 $gray:                  #888888 !default;
 $dark-gray:             #222222 !default;
+$light-gray:            #AAAAAA !default;
 $brand-red:             #CC0000 !default;
 $light-red:             #FF2A2A !default;
 
@@ -17,11 +18,19 @@ body {
     background-color: $dark;
 }
 
+content {
+  img{
+    border-radius: 5px
+  }
+}
+
+
 h1 {
   font-family: 'Russo One', sans-serif;
   font-size: 30px;
   margin-top: 20px;
   margin-bottom: 10px;
+  color: $light-gray;
 }
 
 h2 {
@@ -29,6 +38,7 @@ h2 {
   font-size: 25px;
   margin-top: 15px;
   margin-bottom: 5px;      
+  color: $light-gray;
 }
 
 h3 {
@@ -36,6 +46,7 @@ h3 {
   font-size: 20px;
   margin-top: 10px;
   margin-bottom: 3px;      
+  color: $light-gray;
 }
 
 .project-img {
@@ -81,6 +92,11 @@ h3 {
       color: $brand-red;
       background-color: transparent;
     }
+    > img {
+      width:20px;
+      margin-right:10px;
+      float:left
+    }
   }
 
   .navbar-nav {
@@ -91,8 +107,8 @@ h3 {
         color: #888888;
         &:hover {
           color: $light-red;
-          text-decoration:underline;
-          background-color: transparent;
+          -webkit-transition: all 0.25s linear;
+          transition: color 0.25s linear;
         }
         &:focus {
           color: $white;
@@ -135,6 +151,8 @@ a.link_red {
 .error {
   color: #FF0000;
   font-weight:normal;
+  -webkit-transition: all 0.25s linear;
+  transition: color 0.25s linear;
 
 }
 
@@ -167,7 +185,70 @@ a.link_red {
 } 
  
  
-.btn-sort .badge { 
-  color: #BD1B3B; 
-  background-color: #ffffff; 
+.btn-sort {
+  .badge { 
+    color: #BD1B3B; 
+    background-color: #ffffff; 
+  }
+}
+
+
+#dit_logo {
+  font-size:1000%;
+  font-weight: bold;
+  background: -moz-linear-gradient(45deg, #ff0000 0%, #ff9e9f 50%, #ff0000 100%); /* FF3.6-15 */
+  background-image: -webkit-linear-gradient(45deg, #ff0505 0%,#ff9e9f 51%,#ff0000 100%); /* Chrome10-25,Safari5.1-6 */
+  background-image: linear-gradient(135deg, #ff0505 0%,#ff9e9f 51%,#ff0000 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  color:transparent;
+  -webkit-background-clip: text;
+}
+
+.datagrid table {
+
+  a.link_red {
+    color: black;
+    &:visited {
+      color: black;
+    }
+    &:active {
+      color:  black;
+    }
+    &:hover {
+      color: white;
+    }
+  }
+
+
+  border-collapse: collapse;
+  text-align: left;
+  width: 100%;
+  margin-top:15px;
+  td, .datagrid table th {
+    background: #fb5d5d;
+    padding: 3px 10px;
+  }
+  thead {
+    th {
+      background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #991821), color-stop(1, #FF0000) );
+      background:-moz-linear-gradient( center top, #991821 5%, #80141C 100% );
+      filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#991821', endColorstr='#80141C');
+      background-color:#991821;
+      padding-top:5px;
+      padding-bottom:5px;
+      color:#AAAAAA;
+      font-size: 15px;
+      padding-left:10px
+    }
+  }
+  tbody {
+    td {
+      color: #000000;
+      font-size: 14px;
+      font-weight: normal;
+    }
+    .alt {
+      td { background: #ff6f6f; color: #000000; }
+    }
+  }
+
 }

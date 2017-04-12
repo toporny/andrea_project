@@ -10,9 +10,7 @@
 <!-- build:description -->Raspberry Pi projects list plus external links.<!-- /build:description -->
 <!-- build:author -->D16127504<!-- /build:author -->
  
-
 <!-- build:js_script -->
-<script src="js/jquery.validate.min.js"></script>
 <script src="js/bootbox.min.js"></script>
 <script>
 	document.getElementById("sort_projects").onclick = function() {
@@ -25,7 +23,8 @@
 
 <!-- build:content1 -->
 <h2>Projects</h2>
-<div class="row text-center margin_t20">
+
+<section class="row text-center margin_t20">
 	<div class="col-xs-12 col-md-12">
 		<div class="text-justify">
 			<img class="pull-left project-img" src="img/project1/project1_thumb.jpg" width="33%">
@@ -35,9 +34,9 @@
 			<a class="link_red" href="project1.html">more...</a>
 		</div>
 	</div>
-</div>
+</section>
 <hr>
-<div class="row text-center margin_t20">	
+<section class="row text-center margin_t20">
 	<div class="col-xs-12 col-md-12">
 		<div class="text-justify">
 			<img class="pull-left project-img" src="img/project2/project2_thumb.jpg" width="33%">
@@ -48,9 +47,9 @@
 			<a class="link_red" href="project2.html">more...</a>
 		</div>
 	</div>
-</div>
+</section>
 <hr>
-<div class="row text-center margin_t20">
+<section class="row text-center margin_t20">
 	<div class="col-xs-12 col-md-12">
 		<div class="text-justify">
 			<img class="pull-left project-img" src="img/project3/project3_thumb.jpg" width="33%">
@@ -61,9 +60,9 @@
 			<a class="link_red" href="project3.html">more...</a>
 		</div>
 	</div>
-</div>
+</section>
 <hr>
-<div class="row text-center margin_t20">	
+<section class="row text-center margin_t20">
 	<div class="col-xs-12 col-md-12">
 		<div class="text-justify">
 			<img class="pull-left project-img" src="img/project4/project4_thumb.jpg" width="33%">
@@ -73,9 +72,9 @@
 			<a class="link_red text-left" href="project4.html">more...</a>
 		</div>
 	</div>
-</div>
+</section>
 <hr>
-<div class="row text-center margin_t20">
+<section class="row text-center margin_t20">
 	<div class="col-xs-12 col-md-12">
 		<div class="text-justify">
 			<img class="pull-left project-img" src="img/project5/project5_thumb.jpg" width="33%">
@@ -85,9 +84,9 @@
 			<a class="link_red text-left" href="project5.html">more...</a>
 		</div>
 	</div>
-</div>
+</section>
 <hr>
-<div class="row text-center margin_t20">	
+<section class="row text-center margin_t20">
 	<div class="col-xs-12 col-md-12">
 		<div class="text-justify project-img">
 			<img class="pull-left project-img" src="img/project6/project6_thumb.jpg" width="33%">
@@ -96,7 +95,7 @@
 			<a class="link_red text-left" href="project6.html">more...</a>
 		</div>
 	</div>
-</div>
+</section>
 
 <!-- /build:content1 -->
 
@@ -105,47 +104,51 @@
 
 <h2>External Projects</h2>
  
+
+<ul id="mylist">
+	<li>
+		<a class="link_red" href="https://shkspr.mobi/blog/2015/11/raspberry-pi-zero-hidden-in-an-xbox-controller/">(2015/12/30) Xbox zero controller</a>
+	</li>
+	<li>
+		<a class="link_red" href="http://stratux.me/">(2015/07/09) Stratux</a>
+	</li>
+	<li>
+		<a class="link_red" href="https://hackaday.io/project/4223-raspberry-tor-router">(2016/01/22) Raspberry Tor Router</a>
+	</li>
+	<li>
+		<a class="link_red" href="http://www.instructables.com/id/Raspberry-Pi-Multi-Room-Music-Player/">(2015/04/11) Raspberry Pi Multi-Room Music Player</a>
+	</li>
+	<li>
+		<a class="link_red" href="http://www.instructables.com/id/WhatsApp-on-Raspberry-Pi/">(2014/12/04) WhatsApp on Raspberry Pi</a>
+	</li>
+	<li>
+		<a class="link_red" href="https://learn.adafruit.com/raspberry-pi-face-recognition-treasure-box?view=all">(2014/01/24) Face recognition treasure box</a>
+	</li>
+	<li>
+		<a class="link_red" href="http://drstrangelove.net/2013/12/raspberry-pi-power-cat-feeder-updates/">(2013/12/20) Pi Cat feeder</a>
+	</li>
+	<li>
+		<a class="link_red" href="https://logicethos.com/blog/pitelephone-raspberry-pi-retro-dial-phone/">(2012/12/01) Raspberry Pi retro dial phone</a>
+	</li>
+	<li>
+		<a class="link_red" href="http://www.daveakerman.com/?p=592">(2012/07/16) Raspberry Pi Sends Live Images from Near Space</a>
+	</li>
+	<li>
+		<a class="link_red" href="http://retromaccast.libsyn.com/episode-297-i-shall-call-it-mini-mac">(2013/08/24) I shall call it Mini Mac!</a>
+	</li>
+	<li>
+		<a class="link_red" href="http://www.instructables.com/id/Raspberry-Pi-Wall-Mounted-Google-Calendar/">(2014/04/02) Raspberry Pi Wall Mounted Google Calendar</a>
+	</li>
+	<li>
+		<a class="link_red" " href="http://mkcastor.com/2014/01/02/pipad-build/">(2014/01/02) The Raspberry Pi Tablet</a>
+	</li>
+</ul>
+
+	<hr>
+	<div>Sponsored by:</div>
  
-	<ul id="mylist">
-		<li>
-			<a class="link_red" href="https://shkspr.mobi/blog/2015/11/raspberry-pi-zero-hidden-in-an-xbox-controller/">(2015/12/30) Xbox zero controller</a>
-		</li>
-		<li>
-			<a class="link_red" href="http://stratux.me/">(2015/07/09) Stratux</a>
-		</li>
-		<li>
-			<a class="link_red" href="https://hackaday.io/project/4223-raspberry-tor-router">(2016/01/22) Raspberry Tor Router</a>
-		</li>
-		<li>
-			<a class="link_red" href="http://www.instructables.com/id/Raspberry-Pi-Multi-Room-Music-Player/">(2015/04/11) Raspberry Pi Multi-Room Music Player</a>
-		</li>
-		<li>
-			<a class="link_red" href="http://www.instructables.com/id/WhatsApp-on-Raspberry-Pi/">(2014/12/04) WhatsApp on Raspberry Pi</a>
-		</li>
-		<li>
-			<a class="link_red" href="https://learn.adafruit.com/raspberry-pi-face-recognition-treasure-box?view=all">(2014/01/24) Face recognition treasure box</a>
-		</li>
-		<li>
-			<a class="link_red" href="http://drstrangelove.net/2013/12/raspberry-pi-power-cat-feeder-updates/">(2013/12/20) Pi Cat feeder</a>
-		</li>
-		<li>
-			<a class="link_red" href="https://logicethos.com/blog/pitelephone-raspberry-pi-retro-dial-phone/">(2012/12/01) Raspberry Pi retro dial phone</a>
-		</li>
-		<li>
-			<a class="link_red" href="http://www.daveakerman.com/?p=592">(2012/07/16) Raspberry Pi Sends Live Images from Near Space</a>
-		</li>
-		<li>
-			<a class="link_red" href="http://retromaccast.libsyn.com/episode-297-i-shall-call-it-mini-mac">(2013/08/24) I shall call it Mini Mac!</a>
-		</li>
-		<li>
-			<a class="link_red" href="http://www.instructables.com/id/Raspberry-Pi-Wall-Mounted-Google-Calendar/">(2014/04/02) Raspberry Pi Wall Mounted Google Calendar</a>
-		</li>
-		<li>
-			<a class="link_red" " href="http://mkcastor.com/2014/01/02/pipad-build/">(2014/01/02) The Raspberry Pi Tablet</a>
-		</li>
-	</ul>
-
-
+<span id="dit_logo">DIT</span>
+ 
 <!-- /build:content2 -->
 
 <!-- build:content3 -->

@@ -13,6 +13,8 @@
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/font-awesome.css" rel="stylesheet">
+    
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
     <!-- Custom styles for this template -->
@@ -32,49 +34,61 @@
 
 
   <body>
+	<header>
+	    <nav class="navbar navbar-default">
+	        <div class="container-fluid">
+	            <!-- Brand and toggle get grouped for better mobile display -->
+	            <div class="navbar-header">
+	                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+	                    <span class="sr-only">Toggle navigation</span>
+	                    <span class="icon-bar"></span>
+	                    <span class="icon-bar"></span>
+	                    <span class="icon-bar"></span>
+	                </button>
+	                <a class="navbar-brand" href="index.html"><img alt="logo" src="img/Raspberry_Pi_Logo.svg">Rasberry projects</a>
+	            </div>
 
-	<nav class="navbar navbar-default">
-	  <div class="container-fluid">
-	    <!-- Brand and toggle get grouped for better mobile display -->
-	    <div class="navbar-header">
-	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-	        <span class="sr-only">Toggle navigation</span>
-	        <span class="icon-bar"></span>
-	        <span class="icon-bar"></span>
-	        <span class="icon-bar"></span>
-	      </button>
-	      <a class="navbar-brand" href="index.html"><img alt="logo" style="width:20px; margin-right:10px; float:left" src="img/Raspberry_Pi_Logo.svg">Rasberry projects</a>
-	    </div>
-
-	    <!-- Collect the nav links, forms, and other content for toggling -->
-	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-	      <ul class="nav navbar-nav">
-	        <li class="<!-- build:menu1 -->"><a href="index.html">Start<span class="sr-only">(current)</span></a></li>
-	        <li class="<!-- build:menu2 -->"><a href="projects.html">Projects</a></li>
-	        <li class="<!-- build:menu3 -->"><a href="news.html">News</a></li>
-	        <li class="<!-- build:menu5 -->"><a href="downloads.html">Downloads</a></li>
-	      </ul>
-	      <ul class="nav navbar-nav navbar-right">
-	        <li class="dropdown">
-	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">more ...<span class="caret"></span></a>
-	          <ul class="dropdown-menu">
-	            <li><a href="contact_me.html">Contact me</a></li>
-	            <li id="changeCSSid"><a href="#">Bootstrap white theme</a></li>
-	            <li role="separator" class="divider"></li>
-	            <li><a href="#">Close</a></li>
-	          </ul>
-	        </li>
-	      </ul>
-	    </div><!-- /.navbar-collapse -->
-	  </div><!-- /.container-fluid -->
-	</nav>
+	            <!-- Collect the nav links, forms, and other content for toggling -->
+	            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	                <ul class="nav navbar-nav">
+	                    <li class="<!-- build:menu1 -->"><a href="index.html">Start<span class="sr-only">(current)</span></a>
+	                    </li>
+	                    <li class="<!-- build:menu2 -->"><a href="projects.html">Projects</a>
+	                    </li>
+	                    <li class="<!-- build:menu3 -->"><a href="news.html">News</a>
+	                    </li>
+	                    <li class="<!-- build:menu5 -->"><a href="downloads.html">Downloads</a>
+	                    </li>
+	                </ul>
+	                <ul class="nav navbar-nav navbar-right">
+	                    <li class="dropdown">
+	                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">more ...<span class="caret"></span></a>
+	                        <ul class="dropdown-menu">
+	                            <li><a href="contact_me.html">Contact me</a>
+	                            </li>
+	                            <li id="changeCSSid"><a href="#">Bootstrap white theme</a>
+	                            </li>
+	                            <li role="separator" class="divider"></li>
+	                            <li><a href="#">Close</a>
+	                            </li>
+	                        </ul>
+	                    </li>
+	                </ul>
+	            </div>
+	            <!-- /.navbar-collapse -->
+	        </div>
+	        <!-- /.container-fluid -->
+	    </nav>
+	</header>
 
 	<div class="container-fluid">
 		<div class="panel panel-default">
 			<div class="panel-body">
 				<div class="row" >
-					<div class="col-xs-12 col-sm-6 col-md-6   col-lg-5 col-xl-1"><!-- build:content1 --></div>
-					<div class="col-xs-12 col-sm-6 col-md-6   col-lg-5 col-xl-10"><!-- build:content2 --></div>
+					<content>
+						<div class="col-xs-12 col-sm-6 col-md-6   col-lg-5 col-xl-1"><!-- build:content1 --></div>
+						<div class="col-xs-12 col-sm-6 col-md-6   col-lg-5 col-xl-10"><!-- build:content2 --></div>
+					</content>
 					<div class="hidden-xs hidden-sm hidden-md col-lg-2 col-xl-1"><!-- build:content3 --></div>
 				</div>
 			</div>
