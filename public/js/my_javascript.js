@@ -17,7 +17,7 @@ children_menu.addEventListener('click', function (e) {
 }, true);
 
 
-// project sorting, pure j
+// project list sort
 var desc = false;
 
 function sortUnorderedList(sortWay) {
@@ -35,13 +35,16 @@ function sortUnorderedList(sortWay) {
 }
 
 
-
+// this function is launched on contact_me subsite by 
 function form_init() { 
   
+  // This is special validator methods used regexp. First char has to be letter and rest can be letters, comma, dot or dash
   jQuery.validator.addMethod("letters_and_spaces_only", function(value, element) {
     return this.optional(element) || /^[a-z]{1}[a-z ,.'-]+$/i.test(value);
   }, "letters only please");
 
+  // This is special validator methods used regexp. 
+  // [a-zA-Z0-9_\-\.\+]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5}  - means regexp email formula validation
   jQuery.validator.addMethod("my_email", function(value, element) {
     return this.optional(element) || /^([a-zA-Z0-9_\-\.\+]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/i.test(value);
   }, "email address invaild");
@@ -87,7 +90,9 @@ function form_init() {
       });
       dialog.init(function(){
         setTimeout(function(){
+          // show message. HTML tags allowed.
           dialog.find('.bootbox-body').html('Message has been sent. </br> <p class="text-right"><button class="text-right btn btn-default bootbox-close-button">close</button></p>');
+          
           // clear the form after sending
           document.getElementsByName("first_name")[0].value = '';
           document.getElementsByName("last_name")[0].value = '';
@@ -97,7 +102,7 @@ function form_init() {
         }, 3000);
       });
       
-      // form.submit(); // this is removed purpously because I don't have any backed there yet
+      // form.submit(); // this is removed purposely because I don't have any backed there yet
       return false;
 
     }
