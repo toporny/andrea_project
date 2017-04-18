@@ -253,7 +253,7 @@ a.link_red {
   // thead table definitions with gradient color for background
   thead {
     th {
-      background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #991821), color-stop(1, #FF0000) );
+      // background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #991821), color-stop(1, #FF0000) );
       background:-moz-linear-gradient( center top, #991821 5%, #80141C 100% );
       // for IE compatibility
       filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#991821', endColorstr='#80141C');
