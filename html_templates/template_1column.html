@@ -37,7 +37,7 @@
 	<header>
 	    <nav class="navbar navbar-default">
 	        <div class="container-fluid">
-	            <!-- Brand and toggle get grouped for better mobile display -->
+	            <!-- Bootstrap menu. Brand and toggle get grouped for better mobile display -->
 	            <div class="navbar-header">
 	                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
 	                    <span class="sr-only">Toggle navigation</span>
@@ -48,21 +48,19 @@
 	                <a class="navbar-brand" href="index.html"><img src="img/Raspberry_Pi_Logo.svg">Raspberry projects</a>
 	            </div>
 
-	            <!-- Collect the nav links, forms, and other content for toggling -->
+	            <!-- Bootstrap menu. Collect the nav links, forms, and other content for toggling -->
 	            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	                <ul class="nav navbar-nav">
-	                    <li class="<!-- build:menu1 -->"><a href="index.html">Start<span class="sr-only">(current)</span></a>
-	                    </li>
-	                    <li class="<!-- build:menu2 -->"><a href="projects.html">Projects</a>
-	                    </li>
-	                    <li class="<!-- build:menu3 -->"><a href="news.html">News</a>
-	                    </li>
-	                    <li class="<!-- build:menu5 -->"><a href="downloads.html">Downloads</a>
-	                    </li>
+	                	<!-- build:menu1, build:menu2, build:menu3, build:menu4 variables are replaced by gulp-template-html -->
+	                    <li class="<!-- build:menu1 -->"><a href="index.html">Start<span class="sr-only">(current)</span></a></li>
+	                    <li class="<!-- build:menu2 -->"><a href="projects.html">Projects</a></li>
+	                    <li class="<!-- build:menu3 -->"><a href="news.html">News</a></li>
+	                    <li class="<!-- build:menu5 -->"><a href="downloads.html">Downloads</a></li>
 	                </ul>
 	                <ul class="nav navbar-nav navbar-right">
 	                    <li class="dropdown">
 	                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">more ...<span class="caret"></span></a>
+	                        <!-- Bootstrap dropdown menu. -->
 	                        <ul class="dropdown-menu">
 	                            <li><a href="survey.html">Survey</a></li>
 	                            <li><a href="contact_me.html">Contact me</a></li>
@@ -83,7 +81,7 @@
 		<div class="panel panel-default">
 			<div class="panel-body">
 				<div class="row">
-					<div style="border:0px solid green" class="col-xs-12 col-sm-12 col-md-12   col-lg-12 col-xl-12"><!-- build:content1 --></div>
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12"><!-- build:content1 --></div>
 				</div>
 			</div>
 		</div>

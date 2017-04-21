@@ -37,7 +37,7 @@
 	<header>
 	    <nav class="navbar navbar-default">
 	        <div class="container-fluid">
-	            <!-- Brand and toggle get grouped for better mobile display -->
+				<!-- Bootstrap menu. Brand and toggle get grouped for better mobile display -->
 	            <div class="navbar-header">
 	                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
 	                    <span class="sr-only">Toggle navigation</span>
@@ -48,21 +48,19 @@
 	                <a class="navbar-brand" href="index.html"><img alt="logo" src="img/Raspberry_Pi_Logo.svg">Raspberry projects</a>
 	            </div>
 
-	            <!-- Collect the nav links, forms, and other content for toggling -->
+	            <!-- Bootstrap menu. Collect the nav links, forms, and other content for toggling -->
 	            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	                <ul class="nav navbar-nav">
-	                    <li class="<!-- build:menu1 -->"><a href="index.html">Start<span class="sr-only">(current)</span></a>
-	                    </li>
-	                    <li class="<!-- build:menu2 -->"><a href="projects.html">Projects</a>
-	                    </li>
-	                    <li class="<!-- build:menu3 -->"><a href="news.html">News</a>
-	                    </li>
-	                    <li class="<!-- build:menu5 -->"><a href="downloads.html">Downloads</a>
-	                    </li>
+	               		<!-- build:menu1, build:menu2, build:menu3, build:menu4 variables are replaced by gulp-template-html -->
+	                    <li class="<!-- build:menu1 -->"><a href="index.html">Start<span class="sr-only">(current)</span></a></li>
+	                    <li class="<!-- build:menu2 -->"><a href="projects.html">Projects</a></li>
+	                    <li class="<!-- build:menu3 -->"><a href="news.html">News</a></li>
+	                    <li class="<!-- build:menu5 -->"><a href="downloads.html">Downloads</a></li>
 	                </ul>
 	                <ul class="nav navbar-nav navbar-right">
 	                    <li class="dropdown">
 	                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">more ...<span class="caret"></span></a>
+	                        <!-- Bootstrap dropdown menu. -->
 	                        <ul class="dropdown-menu">
 	                            <li><a href="survey.html">Survey</a></li>
 	                            <li><a href="contact_me.html">Contact me</a></li>
@@ -79,12 +77,31 @@
 	    </nav>
 	</header>
 
+<!--
+Below Bootstrap explanation for 3 columns:
+column1: explanation
+<div class="col-xs-12 col-sm-12 col-md-12   col-lg-10">CONTENT LEFT </div>
+col-xs-12 - on extra small screens <div> fills all 12 grids
+col-sm-12 - on small screens <div> fills 12 grids
+col-md-12 - on medium screens <div> fills 12 grids
+col-lg-10 - on large screens <div> fills 10 grids
+
+column3: explanation
+<div class="hidden-xs hidden-sm hidden-md   col-lg-2">CONTENT RIGHT</div>
+hidden-xs - on extra small screens <div>hidden-md
+hidden-sm - on small screens <div> is invisible
+hidden-md - on medium screens <div>hidden-md
+col-lg-2 - on large screens <div> fills 2 grids
+
+MORE DETAILS GRIDS EXPLANATION IS ON MY SUBMISSION 1
+-->
+
 	<div class="container-fluid">
 		<div class="panel panel-default">
 			<div class="panel-body">
 				<div class="row">
-					<div class="col-xs-12 col-sm-12 col-md-12   col-lg-10 col-xl-11"><!-- build:content1 --></div>
-					<div class="hidden-xs hidden-sm hidden-md   col-lg-2 col-xl-1"><!-- build:content2 --></div>
+					<div class="col-xs-12 col-sm-12 col-md-12   col-lg-10"><!-- build:content1 --></div>
+					<div class="hidden-xs hidden-sm hidden-md   col-lg-2"><!-- build:content2 --></div>
 				</div>
 			</div>
 		</div>
