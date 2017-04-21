@@ -1,21 +1,4 @@
 
-// this part of code allows to choose beetwean my DARK overrided bootstrap scheme and oryginal bootstrap scheme
-children_menu = document.getElementById('changeCSSid');
-toogle_var = 1; // 1-my dark scheme. 0-bootstrap scheme
-
-children_menu.addEventListener('click', function (e) { 
-	if (toogle_var == 1) {
-		document.getElementById("my_css").href = "";
-		document.getElementById("changeCSSid").innerHTML = '<a href="#">My dark theme</a>'; // new menu content 
-		toogle_var = 0;
-	} else {
-		document.getElementById("my_css").href = "css/mystyles.css";
-		document.getElementById("changeCSSid").innerHTML = '<a href="#">Bootstrap white theme</a>'; // new menu content 
-		toogle_var = 1;
-	}
-
-}, true);
-
 
 // project list sort
 var desc = false;

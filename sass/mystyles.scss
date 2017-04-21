@@ -1,3 +1,6 @@
+// predefined colors for SASS
+// very usefull. One change - changes automatically everywhere
+
 $white:                 #FFFFFF !default;
 $dark:                  #060606 !default;
 $gray:                  #888888 !default;
@@ -6,10 +9,12 @@ $light-gray:            #AAAAAA !default;
 $brand-red:             #CC0000 !default;
 $light-red:             #FF2A2A !default;
 
+// additional fonts for my project
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
 @import url("https://fonts.googleapis.com/css?family=Russo+One");
 
 
+// this override bootstrap CSS definitions
 body {
     font-family: "Roboto", "Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 14px;
@@ -25,6 +30,7 @@ img {
   width:100%;
 }
 
+// this frame is for twitter news/has to be 100% for every screen/column
 iframe {
   width:100%;
 }
@@ -32,7 +38,7 @@ iframe {
 
 // h1 different than bootstrap Russo One font and smaller
 h1 {
-  font-family: 'Russo One', sans-serif;
+  font-family: 'Russo One', sans-serif; // my font
   font-size: 30px;
   margin-top: 20px;
   margin-bottom: 10px;
@@ -45,7 +51,7 @@ h2 {
   font-size: 25px;
   margin-top: 15px;
   margin-bottom: 5px;      
-  color: $light-gray;
+  color: $light-gray; // used here predefined color
 }
 
 // h3 different than bootstrap Russo One font and scss $light-gray color
@@ -94,7 +100,7 @@ h3 {
   background-color: $dark;
   border-color: transparent;
 
-  // definitions for logo and two words
+  // definitions for logo and two words. Override bootstrap definitions
   .navbar-brand {
     color: $white;
     padding-top:13px;
@@ -113,7 +119,10 @@ h3 {
     }
   }
 
-  // navbar nav
+  // navbar nav, Override bootstrap definitions
+  // I used this fancy sass feature: nesting!
+  // You can see file before minification here:
+  // http://andrea_assigment.alltic.home.pl/andrea_assigment/css/css_before_minification/mystyles.css
   .navbar-nav {
     > li {
       font-family: 'Russo One', sans-serif;
@@ -152,7 +161,7 @@ h3 {
 
 
 
-// link_red definition
+// link_red definition for whole wwww
 a.link_red {
   color: $light-red;
   &:visited {
@@ -166,7 +175,7 @@ a.link_red {
   }
 }
 
-// it used in contact validation
+// it used this class in "contact" / validation
 .error {
   color: #FF0000;
   font-weight:normal;
@@ -192,6 +201,7 @@ a.link_red {
   margin-top:20px;
 }
 
+// quick fix for small space somewhere
 .margin_b10 {
   margin-bottom:10px;
 }
@@ -206,14 +216,17 @@ a.link_red {
   &:active {
     color: #ffffff; 
   }
-  .badge { 
+  .badge { // overriding bootstrap definitions
     color: #BD1B3B; 
     background-color: #ffffff; 
   }  
 } 
  
 
-// dit_logo  with gradient color
+// This is an example of CSS3 linear-gradient
+// you can see result here: http://andrea_assigment.alltic.home.pl/andrea_assigment/projects.html
+// dit_logo with gradient color
+
 #dit_logo {
   font-size:1000%;
   font-weight: bold;
@@ -225,7 +238,8 @@ a.link_red {
 }
 
 
-// table styling with gradient header
+// table styling with nice header
+// result here: http://andrea_assigment.alltic.home.pl/andrea_assigment/downloads.html
 .datagrid table {
   
   // it this case (inside datagrid table) I need overwrite link_red what I defined before
@@ -250,10 +264,11 @@ a.link_red {
     background: #fb5d5d;
     padding: 3px 10px;
   }
+
   // thead table definitions with gradient color for background
   thead {
     th {
-      // background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #991821), color-stop(1, #FF0000) );
+      background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #991821), color-stop(1, #FF0000) );
       background:-moz-linear-gradient( center top, #991821 5%, #80141C 100% );
       // for IE compatibility
       filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#991821', endColorstr='#80141C');
