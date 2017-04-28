@@ -1,5 +1,7 @@
 # Andrea project
 
+final website url: http://alltic.home.pl/andrea_assigment/
+
 How to install:
 
 ```sh
@@ -10,6 +12,9 @@ $ gulp
 
 and launch: http://localhost:8080
 ```
+
+
+
 
 Remember to install and start chrome livereload extension plugin:
 ```sh
