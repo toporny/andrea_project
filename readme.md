@@ -1,6 +1,11 @@
 # Andrea project
 
-final website url: http://alltic.home.pl/andrea_assigment/
+This is my experiments with [GULP](http://gulpjs.com/), livereload with template-html and sass together
+
+
+
+
+Final website url: http://alltic.home.pl/andrea_assigment/
 
 How to install:
 
