@@ -175,6 +175,20 @@ a.link_red {
   }
 }
 
+a.link_gray {
+  color: $light-gray;
+  &:visited {
+    color: $light-gray;
+  }
+  &:active {
+    color:  $light-gray;
+  }
+  &:hover {
+    color: #light-gray;
+    text-decoration:none;
+  }
+}
+
 // it used this class in "contact" / validation
 .error {
   color: #FF0000;
