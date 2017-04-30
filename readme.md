@@ -1,6 +1,6 @@
 # Andrea project
 
-This is my experiments with [gulp](http://gulpjs.com/), [livereload](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei) with [gulp-template-html](https://www.npmjs.com/package/gulp-template-html) and  [http://sass-lang.com/](http://sass-lang.com/) together
+This is my experiments with [gulp](http://gulpjs.com/), [livereload](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei) with [gulp-template-html](https://www.npmjs.com/package/gulp-template-html) and  [sass](http://sass-lang.com/) together
 
 Final website url: [http://alltic.home.pl/andrea_assigment/](http://alltic.home.pl/andrea_assigment/)
 
