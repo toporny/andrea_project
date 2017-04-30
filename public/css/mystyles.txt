@@ -9,6 +9,15 @@ You can generate this file by 'gulp' command.
 More info here:
 https://github.com/toporny/andrea_project/blob/master/readme.md
 
-If you really don't want to generate by yourself you can find already generated file in hosting server:
+If you really don't want to generate by yourself you can still find CSS files on my server:
+
+
+css before minification:
+
+http://alltic.home.pl/andrea_assigment/css/css_before_minification/mystyles.css
+
+
+
+css after minification:
 
 http://alltic.home.pl/andrea_assigment/css/mystyles.css
