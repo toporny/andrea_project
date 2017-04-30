@@ -1,11 +1,8 @@
 # Andrea project
 
-This is my experiments with [GULP](http://gulpjs.com/), livereload with template-html and sass together
+This is my experiments with [gulp](http://gulpjs.com/), [livereload](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei) with [gulp-template-html](https://www.npmjs.com/package/gulp-template-html) and  [http://sass-lang.com/](http://sass-lang.com/) together
 
-
-
-
-Final website url: http://alltic.home.pl/andrea_assigment/
+Final website url: [http://alltic.home.pl/andrea_assigment/](http://alltic.home.pl/andrea_assigment/)
 
 How to install:
 
@@ -19,9 +16,9 @@ and launch: http://localhost:8080
 ```
 
 
-
-
-Remember to install and start chrome livereload extension plugin:
+Don't forget to install and start chrome livereload extension plugin:
 ```sh
-https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei
+[https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei)
 ```
+
+Have fun!
