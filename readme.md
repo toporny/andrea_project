@@ -17,8 +17,7 @@ and launch: http://localhost:8080
 
 
 Don't forget to install and start chrome livereload extension plugin:
-```sh
 [https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei)
-```
+
 
 Have fun!
