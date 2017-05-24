@@ -13,7 +13,7 @@ $ npm install
 $ npm update
 $ gulp
 
-and launch: http://localhost:8080
+and open browser and launch: http://localhost:8080
 ```
 
 
