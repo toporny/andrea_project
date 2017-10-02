@@ -7,7 +7,7 @@ Final website url: [http://alltic.home.pl/andrea_assigment/](http://alltic.home.
 How to install:
 
 ```sh
-$ git co https://github.com/toporny/andrea_project.git
+$ git clone https://github.com/toporny/andrea_project.git
 $ cd andrea_project
 $ npm install
 $ npm update
