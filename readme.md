@@ -21,4 +21,8 @@ Don't forget to install and start chrome livereload extension plugin:
 [https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei)
 
 
+
+![N](public/img/screenshot.jpg)
+Screenshot:
+
 Have fun!
